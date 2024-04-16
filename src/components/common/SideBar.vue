@@ -8,6 +8,16 @@ const noteStore = useNoteStore()
 <template>
   <div class="rs__notes-sidebar">
     <h4 class="rs__sidebar-title">
+      <Icon icon="sort" fill="#444" :clickable="false">Pinned Notes</Icon>
+    </h4>
+    <hr class="rs__notes-divider" />
+    <ul class="rs__note-list">
+      <li v-for="note in noteStore.pinnedNotes" :key="note.id">
+        {{ note.title }}
+      </li>
+    </ul>
+    <br>
+    <h4 class="rs__sidebar-title">
       <Icon icon="sort" fill="#444" :clickable="false">All Notes</Icon>
     </h4>
     <hr class="rs__notes-divider" />
