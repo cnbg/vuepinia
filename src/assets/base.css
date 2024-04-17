@@ -17,3 +17,12 @@ div#app {
 .ml-5p {
     margin-left: 5px;
 }
+
+
+.invisible {
+    visibility: hidden;
+}
+
+.hidden {
+    display: none;
+}

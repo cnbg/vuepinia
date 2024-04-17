@@ -6,15 +6,17 @@ import Icon from '@/components/common/Icon.vue'
   <div class="rs__notes-toolbar">
     <div class="rs__notes-title">
       rs notes
-      <Icon icon="edit" class="mr-5p"></Icon>
     </div>
     <div class="rs__actions-icons">
-      <Icon icon="delete"></Icon>
-    </div>
-    <div class="rs__actions-icons">
-      <Icon icon="search"></Icon>
-      <Icon icon="gridview"></Icon>
-      <Icon icon="listview"></Icon>
+      <div class="rs__actions-icon">
+        <Icon icon="edit" class="mr-5p"></Icon>
+        <Icon icon="delete" class="mr-5p"></Icon>
+      </div>
+      <div class="rs__actions-icon">
+        <Icon icon="search" class="ml-5p"></Icon>
+        <Icon icon="gridview" class="ml-5p"></Icon>
+        <Icon icon="listview" class="ml-5p"></Icon>
+      </div>
     </div>
   </div>
 </template>

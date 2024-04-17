@@ -1,31 +1,14 @@
 <script setup>
-import Icon from '@/components/common/Icon.vue'
-import { useNoteStore } from '@/stores/NoteStore.js'
+import SideBarList from '@/components/common/SideBarList.vue'
+import { useNoteStore } from '@/stores/NoteStore'
 
 const noteStore = useNoteStore()
 </script>
 
 <template>
   <div class="rs__notes-sidebar">
-    <h4 class="rs__sidebar-title">
-      <Icon icon="sort" fill="#444" :clickable="false">Pinned Notes</Icon>
-    </h4>
-    <hr class="rs__notes-divider" />
-    <ul class="rs__note-list">
-      <li v-for="note in noteStore.pinnedNotes" :key="note.id">
-        {{ note.title }}
-      </li>
-    </ul>
-    <br>
-    <h4 class="rs__sidebar-title">
-      <Icon icon="sort" fill="#444" :clickable="false">All Notes</Icon>
-    </h4>
-    <hr class="rs__notes-divider" />
-    <ul class="rs__note-list">
-      <li v-for="note in noteStore.allNotes" :key="note.id">
-        {{ note.title }}
-      </li>
-    </ul>
+    <SideBarList v-if="noteStore.pinnedNotes.length > 0" :notes="noteStore.pinnedNotes" title="Pinned Notes" icon="bookmarks" />
+    <SideBarList :notes="noteStore.unpinnedNotes" title="All Notes" icon="sort" />
   </div>
 </template>
 

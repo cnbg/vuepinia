@@ -18,7 +18,6 @@
 }
 
 .rs__notes-toolbar {
-    padding: 10px 20px;
     background: #6528f7;
     color: #fff;
     display: flex;
@@ -28,42 +27,114 @@
 
 .rs__notes-title {
     width: 30%;
+    min-width: 180px;
+    max-width: 400px;
+    padding: 10px 15px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .rs__actions-icons {
-    width: 36%;
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px;
+
+    .rs__actions-icon {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .rs__justify-end {
     justify-content: flex-end;
 }
 
-.rs__content-wrapper {
-    height: 100%;
-}
-
 .rs__notes-divider {
     margin: 10px 0;
 }
 
-.rs__notes-sidebar {
-    width: 30%;
+.rs__content-wrapper {
+    width: 100%;
     height: 100%;
-    border-right: 1px solid #ddd;
-    padding: 15px;
-    overflow-y: auto;
-    background-color: #eee;
+    display: flex;
+    flex-flow: row;
 
-    .rs__note-list {
-        list-style: none;
+    .rs__notes-sidebar {
+        width: 30%;
+        min-width: 180px;
+        max-width: 400px;
+        height: 100%;
+        border-right: 1px solid #ddd;
+        padding: 15px;
+        overflow-y: auto;
+        background-color: #eee;
 
-        li {
-            padding: 5px;
+        .rs__sidebar-title {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+        }
+
+        .rs__note-list {
+            list-style: none;
+            margin-bottom: 10px;
+
+            li {
+                padding: 5px;
+                display: flex;
+                justify-content: space-between;
+
+                &:hover {
+                    .icon {
+                        visibility: visible;
+                    }
+                }
+            }
+        }
+    }
+
+    .rs__notes-content {
+        width: 100%;
+        height: 100%;
+        padding: 15px;
+
+        .rs__note-form {
+            width: 100%;
+            height: 100%;
+
+            .rs__input-title {
+                width: 100%;
+                padding: 5px 10px;
+                border: 1px solid #ddd;
+                outline: none;
+            }
+
+            .rs__content-editable {
+                width: 100%;
+                height: calc(100% - 90px);
+                border: 1px solid #ddd;
+                margin: 10px 0;
+                outline: none;
+                padding: 10px;
+            }
+
+            .rs__form-btn-save {
+                display: flex;
+                align-items: center;
+                padding: 5px 10px;
+                border: none;
+                box-shadow: 0 0 2px 0 #6528f7;
+                cursor: pointer;
+                color: #fff;
+                background-color: #6528f7;
+
+                &:hover {
+                    box-shadow: 0 0 3px 1px #6528f7;
+                }
+            }
         }
     }
 }
