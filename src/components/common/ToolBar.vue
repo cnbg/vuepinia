@@ -5,7 +5,7 @@ import Icon from '@/components/common/Icon.vue'
 <template>
   <div class="rs__notes-toolbar">
     <div class="rs__notes-title">
-      rs notes
+      {{ $t('message.hello') }}
     </div>
     <div class="rs__actions-icons">
       <div class="rs__actions-icon">
