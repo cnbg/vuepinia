@@ -1,5 +1,9 @@
 @import './base.css';
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .rs__notes-wrapper {
     display: flex;
     flex-flow: column;
